@@ -4,12 +4,16 @@ app = Flask(__name__)
 userName = None
 userAddress = None
 userID = None
-userOrder = None
+userActiveOrder = None
 dataBaseUser = None
 dataBasePassword = None
+orderRestaurant = None
+orderTime = None
 
 def user():
-    global userName, userAddress, userID, userOrder, dataBasePassword, dataBaseUser
+    global userName, userAddress, userID, dataBasePassword, dataBaseUser
+def order():
+    global userActiveOrderOrder, orderRestaurant, orderTime
 
 @app.route('/login-form', methods=['GET', 'POST'])
 def getUserData():
@@ -23,11 +27,5 @@ def getUserData():
     except Exception as e:
         return render_template("login-form", error = error)
 
-
-
-
 @app.route('/request-form', methods=['GET', 'POST'])
 def getInfoOrder():
-
-
-
