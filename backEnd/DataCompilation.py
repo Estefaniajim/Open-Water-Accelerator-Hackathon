@@ -11,9 +11,15 @@ def user():
 
 @app.route('/login-form', methods=['GET', 'POST'])
 def getUserData():
+    error = None
     try:
+        if request.method == "POST":
+            attemptedUser = request.form["username"]
+            attemptedPassword = request.form["password"]
+            
+
     except Exception as e:
-        return render_template("login-form", error = "There was a problem with the login information")
+        return render_template("login-form", error = error)
 
 
 
