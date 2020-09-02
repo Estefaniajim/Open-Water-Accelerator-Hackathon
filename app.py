@@ -10,7 +10,8 @@ app.config["MYSQL_USER"] = db["mysql_user"]
 app.config["MYSQL_PASSWORD"] = db["mysql_password"]
 app.config["MYSQL_DB"] = db["mysql_db"]
 
-app = Flask(__name__)
+mysql = MySQL(app)
+
 @app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "POST":
