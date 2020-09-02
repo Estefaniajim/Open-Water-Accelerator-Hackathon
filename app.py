@@ -19,6 +19,11 @@ def index():
         userDetails = request.form
         name = userDetails["name"]
         email = userDetails["email"]
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO users(name, email) VALUES(%s, %s)", (name, email) )
+        mysql.connection.commit()
+        cur.close()
+        return "sucess"
     return render_template("login.html")
 if __name__ == "__main__":
     app.run(debug=True)
