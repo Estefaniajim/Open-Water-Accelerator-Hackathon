@@ -29,7 +29,7 @@ def order():
     global userActiveOrderOrder, orderRestaurant, orderTime
 
 #Registering a new user
-@app.route("/register", methods=("GET", "POST"))
+@app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         username = request.form["username"]
@@ -49,9 +49,24 @@ def register():
         cur.execute("INSERT INTO users(username, email, password) VALUES(%s, %s, %s)",(name, email, password))
         mysql.connection.commit()
         cur.close()
-        return redirect(url_for("auth.login"))
+        return redirect(url_for("address"))
 
     return render_template("register", error = error)
+
+#Adding address details
+@app.route("/address", methods=["GET", "POST"])
+def address():
+    if request.method == "POST":
+        address1 = request.form["address1"]
+        address2 = request.form["address2"]
+        city = request.form["city"]
+        state = request.form["state"]
+        zipCode = request.form["zipCode"]
+        cur.execute("INSERT INTO users(address1, address2, city, state, zipCode) VALUES(%s, %s, %s, %s, %s)",
+                   (address1, address2, city, state, zipCode))
+        mysql.connection.commit()
+        cur.close()
+        return redirect(url_for("auth.login"))
 
 # Getting the user data form the FE in login
 @app.route('/login-form', methods=['GET', 'POST'])
