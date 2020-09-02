@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.signup{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  border-radius: 24px;
+  height: 53px;
+  width: 180px;
+}
+.login{
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  left: 46.5%;
+  border-radius: 20px;
+  height: 45px;
+  width: 140px;
+}
+.or{
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  left: 51%;
+}
+.sign{
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+}
+.name{
+  margin: 0;
+  position: absolute;
+  top: 18%;
+  left: 40%;
+}
+.input1{
+  margin: 0;
+  position: absolute;
+  top: 21%;
+  left: 40%;
+  color-adjust: rgb(155, 147, 147);
+}
+.email{
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+.input2{
+  margin: 0;
+  position: absolute;
+  top: 28%;
+  left: 40%;
+}
+.password{
+  margin: 0;
+  position: absolute;
+  top: 32%;
+  left: 40%;
+}
+.input3{
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}
+.confirm{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+.input4{
+  margin: 0;
+  position: absolute;
+  top: 44%;
+  left: 40%;
+}
+.account{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 41%;
+}
